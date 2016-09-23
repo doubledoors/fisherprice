@@ -11,6 +11,7 @@ class App extends Component {
     // Set initial state
     this.state = {
       url: '',
+      nonValidatedQuery: '',
     }
     this.onUserInputSubmit = this.onUserInputSubmit.bind(this);
   };
@@ -19,6 +20,17 @@ class App extends Component {
     console.log(`recieved ${inputValue} from UserInput`);
     this.setState({
       nonValidatedQuery: inputValue,
+    },this.validateMyQuery);
+  };
+
+  validateMyQuery() {
+    console.log(`let's validate ${this.state.nonValidatedQuery}`);
+
+    // Let's assume we've validated here and set the URL
+    let validatedURL = this.state.nonValidatedQuery;
+
+    this.setState({
+      url: validatedURL,
     });
   };
 
@@ -27,11 +39,10 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Input a YouTube URL</h2>
         </div>
         <div>
           <UserInputForm onSubmit={this.onUserInputSubmit}/>
-          <VideoDisplay/>
+          <VideoDisplay videoId=""/>
         </div>
       </div>
     );

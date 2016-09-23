@@ -36,17 +36,19 @@ class App extends Component {
 
   render() {
     const { url } = this.state;
-    let videoDisplay;
-    if (url !== null) {
-      videoDisplay = <VideoDisplay videoId={url}/>
-    }
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <h2>Something something learn React</h2>
+          <p>Input a YouTube video ID and get a video, that's it.</p>
         </div>
         <UserInputForm onSubmit={this.onUserInputSubmit}/>
-        {videoDisplay}
+        {url ?
+          <div className="VideoDisplay">
+            <VideoDisplay videoId={url} />
+          </div>
+        : null}
       </div>
     );
   }

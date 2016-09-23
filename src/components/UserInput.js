@@ -8,7 +8,7 @@ class UserInputForm extends Component {
     this.state = {
       query: '',
     }
-    
+
   };
 
   onChange = (e) => {
@@ -23,9 +23,9 @@ class UserInputForm extends Component {
   render() {
     return(
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form className="UserInputForm" onSubmit={this.handleSubmit}>
           <input type="text" onChange={this.onChange} name="userinput"/>
-          <input type="submit" name="add"/>
+          <input type="submit" name="add" value="Get Video"/>
         </form>
       </div>
     );

@@ -12,10 +12,14 @@ class App extends Component {
     this.state = {
       url: '',
     }
+    this.onUserInputSubmit = this.onUserInputSubmit.bind(this);
   };
 
-  onUserInputSubmit() {
-    
+  onUserInputSubmit(inputValue) {
+    console.log(`recieved ${inputValue} from UserInput`);
+    this.setState({
+      nonValidatedQuery: inputValue,
+    });
   };
 
   render() {

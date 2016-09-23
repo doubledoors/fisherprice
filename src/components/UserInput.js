@@ -8,7 +8,7 @@ class UserInputForm extends Component {
     this.state = {
       query: '',
     }
-
+    
   };
 
   onChange = (e) => {
@@ -17,7 +17,7 @@ class UserInputForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    this.props.onSubmit();
+    this.props.onSubmit(this.state.query);
   };
 
   render() {

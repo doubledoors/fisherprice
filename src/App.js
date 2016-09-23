@@ -10,7 +10,7 @@ class App extends Component {
     super();
     // Set initial state
     this.state = {
-      url: '',
+      url: null,
       nonValidatedQuery: '',
     }
     this.onUserInputSubmit = this.onUserInputSubmit.bind(this);
@@ -35,15 +35,18 @@ class App extends Component {
   };
 
   render() {
+    const { url } = this.state;
+    let videoDisplay;
+    if (url !== null) {
+      videoDisplay = <VideoDisplay videoId={url}/>
+    }
     return (
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </div>
-        <div>
-          <UserInputForm onSubmit={this.onUserInputSubmit}/>
-          <VideoDisplay videoId=""/>
-        </div>
+        <UserInputForm onSubmit={this.onUserInputSubmit}/>
+        {videoDisplay}
       </div>
     );
   }

@@ -1,3 +1,6 @@
+This is something to get me started with React. It's simply a 3 component app (UserInputForm, VideoDisplay and the App itself) that takes a YouTube video id and renders
+that video out to the page.
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.  

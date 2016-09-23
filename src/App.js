@@ -44,11 +44,10 @@ class App extends Component {
           <p>Input a YouTube video ID and get a video, that's it.</p>
         </div>
         <UserInputForm onSubmit={this.onUserInputSubmit}/>
-        {url ?
-          <div className="VideoDisplay">
-            <VideoDisplay videoId={url} />
-          </div>
-        : null}
+        {url
+          ? <VideoDisplay videoId={url} />
+          : null
+        }
       </div>
     );
   }

@@ -22,10 +22,10 @@ class UserInputForm extends Component {
 
   render() {
     return(
-      <div>
-        <form className="UserInputForm" onSubmit={this.handleSubmit}>
-          <input type="text" onChange={this.onChange} name="userinput"/>
-          <input type="submit" name="add" value="Get Video"/>
+      <div className="UserInputForm">
+        <form className="UserInputForm__form" onSubmit={this.handleSubmit}>
+          <input type="text" onChange={this.onChange}/>
+          <input type="submit" value="Get Video"/>
         </form>
       </div>
     );

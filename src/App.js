@@ -17,18 +17,16 @@ class App extends Component {
   };
 
   onUserInputSubmit(inputValue) {
-    console.log(`recieved ${inputValue} from UserInput`);
+    // console.log(`recieved ${inputValue} from UserInput`);
     this.setState({
       nonValidatedQuery: inputValue,
     },this.validateMyQuery);
   };
 
   validateMyQuery() {
-    console.log(`let's validate ${this.state.nonValidatedQuery}`);
-
+    // console.log(`let's validate ${this.state.nonValidatedQuery}`);
     // Let's assume we've validated here and set the URL
     let validatedURL = this.state.nonValidatedQuery;
-
     this.setState({
       url: validatedURL,
     });

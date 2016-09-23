@@ -14,11 +14,13 @@ class VideoDisplay extends Component {
     };
 
     return(
-      <YouTube
-        videoId={this.props.videoId}
-        opts={opts}
-        onReady={this._onReady}
-      />
+      <div className="VideoDisplay">
+        <YouTube
+          videoId={this.props.videoId}
+          opts={opts}
+          onReady={this._onReady}
+        />
+      </div>
     );
   }
 

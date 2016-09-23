@@ -14,6 +14,10 @@ class App extends Component {
     }
   };
 
+  onUserInputSubmit() {
+    
+  };
+
   render() {
     return (
       <div className="App">
@@ -22,7 +26,7 @@ class App extends Component {
           <h2>Input a YouTube URL</h2>
         </div>
         <div>
-          <UserInputForm/>
+          <UserInputForm onSubmit={this.onUserInputSubmit}/>
           <VideoDisplay/>
         </div>
       </div>

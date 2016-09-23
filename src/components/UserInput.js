@@ -11,16 +11,20 @@ class UserInputForm extends Component {
 
   };
 
+  onChange = (e) => {
+    this.setState({query: e.target.value});
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
-    this.setState({query: e.target.value});
+    this.props.onSubmit();
   };
 
   render() {
     return(
       <div>
         <form onSubmit={this.handleSubmit}>
-          <input type="text" name="userinput"/>
+          <input type="text" onChange={this.onChange} name="userinput"/>
           <input type="submit" name="add"/>
         </form>
       </div>

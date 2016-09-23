@@ -25,9 +25,4 @@
 
 .UserInputForm {
   margin: 40px auto;
-  width: 640px;
-}
-
-.UserInputForm input[type="text"]{
-  width: 562px;
 }

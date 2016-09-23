@@ -6,8 +6,8 @@ class VideoDisplay extends Component {
   render() {
 
     const opts = {
-      height: '390',
-      width: '640',
+      height: '504',
+      width: '896',
       playerVars: { // https://developers.google.com/youtube/player_parameters
         autoplay: 1
       }
